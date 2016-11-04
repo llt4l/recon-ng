@@ -17,7 +17,7 @@ class GoogleWebMixin(object):
         num = 100
         page = start_page
         set_page = lambda x: (x - 1) * num
-        payload = {'q':query, 'start':set_page(page), 'num':num, 'complete':0}
+        payload = {'q':query, 'start':set_page(page), 'num':num, 'complete':0, 'filter':0}
         results = []
         self.verbose('Searching Google for: %s' % (query))
         while True:
